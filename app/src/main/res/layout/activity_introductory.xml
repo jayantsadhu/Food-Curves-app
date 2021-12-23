@@ -8,6 +8,7 @@
 
     <ImageView
         android:id="@+id/img_bg"
+        android:elevation="2dp"
         android:layout_width="wrap_content"
         android:layout_height="900dp"
         android:src="@drawable/bg"
@@ -17,8 +18,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/logo"
+        android:elevation="2dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/inverse_logo"
@@ -30,6 +33,7 @@
 
     <ImageView
         android:id="@+id/app_name"
+        android:elevation="2dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:src="@drawable/white_app_name"
@@ -41,6 +45,7 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
+        android:elevation="2dp"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         app:lottie_autoPlay="true"
@@ -51,5 +56,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <com.cuberto.liquid_swipe.LiquidPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_editor_absoluteX="0dp"
+        app:layout_editor_absoluteY="0dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Development/Github Repos/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.25" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/button_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/email_pass.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/inner_constraints_shape.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.25" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.25" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding2.xml" value="0.25" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding3.xml" value="0.264" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/login_tab_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/signup_tab_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>
