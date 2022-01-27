@@ -9,8 +9,16 @@
         <item name="colorSecondary">@color/primary_dark</item>
         <item name="colorSecondaryVariant">@color/primary_dark</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Status bar color. -
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!- Customize your theme here. -->
+
+
+
     </style>
+
 </resources>

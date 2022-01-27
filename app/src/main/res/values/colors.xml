@@ -10,4 +10,6 @@
     <color name="purple">#BA53DE</color>
     <color name="pink">#F469A9</color>
 
+    <color name="itemClickChangeColor">#f8bbd0</color>
+
 </resources>
