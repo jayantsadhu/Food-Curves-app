@@ -6,6 +6,7 @@
         <entry key="..\:/Android Development/Github Repos/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.25" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable-v24/profile_icon.xml" value="0.199609375" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/button_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/dashboard_item_bg.xml" value="0.199609375" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/dynamic_item_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/dynamic_rv_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/email_pass.xml" value="0.26614583333333336" />
@@ -23,10 +24,12 @@
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/static_rv_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/twitter_icon.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_dash_board.xml" value="0.25" />
-        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.2" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.136" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/brands_rv_item.xml" value="0.264" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/dashboard_fragment.xml" value="0.1875" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/dashboard_item_background.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/drawer.xml" value="0.25" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/drawer_item.xml" value="0.176" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/drawer_menu.xml" value="0.2" />
@@ -38,8 +41,8 @@
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_my_profile.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_near_by_res.xml" value="0.176953125" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.2" />
-        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding2.xml" value="0.25" />
-        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding3.xml" value="0.264" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding2.xml" value="0.2" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding3.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_settings.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/header.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/login_tab_fragment.xml" value="0.2" />

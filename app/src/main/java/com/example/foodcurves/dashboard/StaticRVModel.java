@@ -1,7 +1,5 @@
 package com.example.foodcurves.dashboard;
 
-import android.widget.LinearLayout;
-
 public class StaticRVModel {
 
     private int image1;

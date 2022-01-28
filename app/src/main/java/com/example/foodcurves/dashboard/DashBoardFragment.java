@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodcurves.DRVInterface.LoadMore;
 import com.example.foodcurves.R;
+import com.example.foodcurves.additional.EndingFragment;
+import com.example.foodcurves.brands.BrandsRVAdapter;
+import com.example.foodcurves.brands.BrandsRVModel;
+import com.example.foodcurves.data.LoadingData;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -21,12 +25,16 @@ public class DashBoardFragment extends Fragment {
 
     RecyclerView recyclerViewTop1;
     RecyclerView recyclerViewTop2;
-    StaticRVAdapter staticRVAdapter;
+    RecyclerView brandRView;
     RecyclerView recyclerViewBottom;
+
+    StaticRVAdapter staticRVAdapter;
+    BrandsRVAdapter brandsRVAdapter;
     DynamicRVAdapter dynamicRVAdapter;
 
     ArrayList<DynamicRVModel> items;
     ArrayList<StaticRVModel> item;
+    ArrayList<BrandsRVModel> brands;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,45 +45,25 @@ public class DashBoardFragment extends Fragment {
         recyclerViewTop1 = root.findViewById(R.id.recycler_view_top1);
         recyclerViewTop2 = root.findViewById(R.id.recycler_view_top2);
         recyclerViewBottom = root.findViewById(R.id.recycler_view_bottom);
+        brandRView = root.findViewById(R.id.brands_rv);
 
         item = new ArrayList<>();
-        item.add(new StaticRVModel(R.drawable.pizza_img, "Pizza", R.drawable.pizza_img, "Pizza"));
-        item.add(new StaticRVModel(R.drawable.fries, "Fries", R.drawable.fries, "Fries"));
-        item.add(new StaticRVModel(R.drawable.fries_, "French Fries", R.drawable.fries_, "French Fries"));
-        item.add(new StaticRVModel(R.drawable.chicken_nugget, "Nuggets", R.drawable.chicken_nugget, "Nuggets"));
-        item.add(new StaticRVModel(R.drawable.egg_roll, "Egg Roll", R.drawable.egg_roll, "Egg Roll"));
-        item.add(new StaticRVModel(R.drawable.hamburger_fries, "Burgers", R.drawable.hamburger_fries, "Burgers"));
-        item.add(new StaticRVModel(R.drawable.chocolate, "Chocolates", R.drawable.chocolate, "Chocolates"));
-
+        LoadingData.putStaticsData(item);
         staticRVAdapter = new StaticRVAdapter(item);
-
         recyclerViewTop1.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerViewTop1.setAdapter(staticRVAdapter);
 
         recyclerViewTop2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerViewTop2.setAdapter(staticRVAdapter);
 
-        items = new ArrayList<>();
-        items.add(new DynamicRVModel("Burger"));
-        items.add(new DynamicRVModel("Fries"));
-        items.add(new DynamicRVModel("Chicken"));
-        items.add(new DynamicRVModel("Egg Roll"));
-        items.add(new DynamicRVModel("Tanduri"));
-        items.add(new DynamicRVModel("Lachha"));
-        items.add(new DynamicRVModel("Dhosa"));
-        items.add(new DynamicRVModel("Idli"));
-        items.add(new DynamicRVModel("Chowmin"));
-        items.add(new DynamicRVModel("Pasta"));
-        items.add(new DynamicRVModel("Biryani"));
-        items.add(new DynamicRVModel("Egg Boil"));
-        items.add(new DynamicRVModel("Omlete"));
-        items.add(new DynamicRVModel("Paratha"));
-        items.add(new DynamicRVModel("Rice"));
-        items.add(new DynamicRVModel("Chicken Chowmin"));
-        items.add(new DynamicRVModel("Kulfi"));
-        items.add(new DynamicRVModel("Momo"));
-        items.add(new DynamicRVModel("Luchi"));
+        brands = new ArrayList<>();
+        LoadingData.putBrandsData(brands);
+        brandsRVAdapter = new BrandsRVAdapter(brands);
+        brandRView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        brandRView.setAdapter(brandsRVAdapter);
 
+        items = new ArrayList<>();
+        LoadingData.putDynamicData(items);
         recyclerViewBottom.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false));
         dynamicRVAdapter = new DynamicRVAdapter(recyclerViewBottom, getActivity(), items);
         recyclerViewBottom.setAdapter(dynamicRVAdapter);
@@ -83,7 +71,7 @@ public class DashBoardFragment extends Fragment {
         dynamicRVAdapter.setLoadMore(new LoadMore() {
             @Override
             public void onLoadMore() {
-                if(items.size()<=50){
+                if(items.size()<=10){
                     items.add(null);
                     dynamicRVAdapter.notifyItemInserted(items.size()-1);
                     new Handler().postDelayed(new Runnable() {
@@ -102,6 +90,11 @@ public class DashBoardFragment extends Fragment {
                 }
             }
         });
+
+        Fragment fragment = new EndingFragment();
+        getParentFragmentManager().beginTransaction()
+                .replace(R.id.end_fragment_container, fragment, fragment.getClass().getSimpleName())
+                .addToBackStack(null).commit();
 
         return root;
     }
