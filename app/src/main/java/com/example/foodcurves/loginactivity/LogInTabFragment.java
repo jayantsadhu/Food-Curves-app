@@ -75,12 +75,19 @@ public class LogInTabFragment extends Fragment {
             }
         });
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onLoginClick(v);
+            }
+        });
+
         return view;
     }
 
     public void onLoginClick(View view){
-        String userName = emailText.getText().toString();
-        String password = passwordText.getText().toString();
+        String userName = emailText.getText().toString().trim();
+        String password = passwordText.getText().toString().trim();
         emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";   //"^(.+)@(.+)$";
         if(!userName.matches(emailPattern)){
             emailText.setError("Invalid email Id");

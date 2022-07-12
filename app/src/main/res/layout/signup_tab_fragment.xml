@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/email_pass"
         android:elevation="5dp"
-        android:hint="Name"
+        android:hint="Email"
         android:maxLines="1"
         android:minHeight="48dp"
         android:paddingStart="20dp"
@@ -24,30 +24,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <EditText
-        android:id="@+id/mobile_num"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/email_pass"
-        android:elevation="5dp"
-        android:hint="Mobile Number"
-        android:maxLines="1"
-        android:minHeight="48dp"
-        android:paddingStart="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="10dp"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_bias="0.25"
         app:layout_constraintWidth_percent="0.8" />
 
     <EditText
@@ -69,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile_num"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent="0.8" />
 
@@ -97,7 +74,7 @@
         app:layout_constraintWidth_percent="0.8" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signup_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

@@ -108,4 +108,5 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "No suitable application found to handle this request",
                     Toast.LENGTH_SHORT).show();
     }
+
 }

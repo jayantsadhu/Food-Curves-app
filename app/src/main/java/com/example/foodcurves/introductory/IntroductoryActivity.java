@@ -17,8 +17,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.foodcurves.MainActivity;
 import com.example.foodcurves.R;
 import com.example.foodcurves.loginactivity.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class IntroductoryActivity extends AppCompatActivity {
 
@@ -30,8 +33,10 @@ public class IntroductoryActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ScreenSlidePagerAdapter pagerAdapter;
     Animation animation;
-
     SharedPreferences sharedPreferences;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
     final int SPLASH_TIME_OUT = 4700;
 
     @Override
@@ -44,8 +49,11 @@ public class IntroductoryActivity extends AppCompatActivity {
         appName = findViewById(R.id.app_name);
         splashImg = findViewById(R.id.img_bg);
         lottieAnimationView = findViewById(R.id.lottie);
-
         viewPager = findViewById(R.id.pager);
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
 
@@ -61,11 +69,19 @@ public class IntroductoryActivity extends AppCompatActivity {
             appName.animate().translationY(3000).setDuration(1000).setStartDelay(4000);
             lottieAnimationView.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
             sharedPreferences.edit().putBoolean("isFirstTime", false).apply();
-        } else {
+        } else if(mUser==null){
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
+                }
+            }, SPLASH_TIME_OUT);
+        }else{
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 }
             }, SPLASH_TIME_OUT);

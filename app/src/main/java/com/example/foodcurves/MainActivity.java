@@ -8,16 +8,20 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.foodcurves.loginactivity.LoginActivity;
 import com.example.foodcurves.navdrawer.AboutUsFragment;
 import com.example.foodcurves.dashboard.DashBoardFragment;
 import com.example.foodcurves.navdrawer.NearByResFragment;
 import com.example.foodcurves.navdrawer.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -25,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     NavigationView navigationView;
     Menu menu;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +42,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.toolbar);
         navigationView = findViewById(R.id.navigation_view);
 
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
         menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_profile).setVisible(false);
-        menu.findItem(R.id.nav_logout).setVisible(false);
+
+        if(mUser!=null) {
+            menu.findItem(R.id.nav_login).setVisible(false);
+            menu.findItem(R.id.nav_profile).setVisible(true);
+            menu.findItem(R.id.nav_logout).setVisible(true);
+        }
+        else{
+            menu.findItem(R.id.nav_login).setVisible(true);
+            menu.findItem(R.id.nav_profile).setVisible(false);
+            menu.findItem(R.id.nav_logout).setVisible(false);
+        }
         navigationView.bringToFront();
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -79,11 +97,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 moveToFragment(R.id.nav_container, new AboutUsFragment());
                 break;
             case  R.id.nav_login:
-                menu.findItem(R.id.nav_login).setVisible(false);
-                menu.findItem(R.id.nav_profile).setVisible(true);
-                menu.findItem(R.id.nav_logout).setVisible(true);
+                jumpToLoginPage();
                 break;
             case R.id.nav_logout:
+                mAuth.signOut();
                 menu.findItem(R.id.nav_profile).setVisible(false);
                 menu.findItem(R.id.nav_logout).setVisible(false);
                 menu.findItem(R.id.nav_login).setVisible(true);
@@ -91,6 +108,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void jumpToLoginPage() {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     public void moveToFragment(int containerID, Fragment fragment){
