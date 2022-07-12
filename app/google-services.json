@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277624462036",
+    "project_id": "food-curves-df7d5",
+    "storage_bucket": "food-curves-df7d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277624462036:android:4e9563d3e6e5ebfbed7941",
+        "android_client_info": {
+          "package_name": "com.example.foodcurves"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277624462036-jnua1gi5qm5mk5e2p0jmf1v2ngogcdjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkWzCdb62RDKuFlhL-PG0sV03xgj-4SGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277624462036-jnua1gi5qm5mk5e2p0jmf1v2ngogcdjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
