@@ -52,7 +52,7 @@ public class BrandsRVAdapter extends RecyclerView.Adapter<BrandsRVAdapter.BrandV
                     linearLayoutCheck.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
                 linearLayoutCheck = holder.linearLayout1;
-                linearLayoutCheck.setBackgroundColor(Color.parseColor("#eeeeee"));
+                linearLayoutCheck.setBackgroundColor(Color.parseColor("#ff8a65"));
             }
         });
         holder.linearLayout2.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +61,8 @@ public class BrandsRVAdapter extends RecyclerView.Adapter<BrandsRVAdapter.BrandV
                 if (linearLayoutCheck != null) {
                     linearLayoutCheck.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
-                linearLayoutCheck = holder.linearLayout1;
-                linearLayoutCheck.setBackgroundColor(Color.parseColor("#eeeeee"));
+                linearLayoutCheck = holder.linearLayout2;
+                linearLayoutCheck.setBackgroundColor(Color.parseColor("#ff8a65"));
             }
         });
     }

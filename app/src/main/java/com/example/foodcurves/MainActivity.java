@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.foodcurves.navdrawer.AboutUsFragment;
 import com.example.foodcurves.dashboard.DashBoardFragment;
@@ -96,5 +97,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportFragmentManager().beginTransaction()
                 .replace(containerID, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(null).commit();
+    }
+
+    public void onNotificationClick(View v ){
+        moveToFragment(R.id.nav_container, new NearByResFragment());
     }
 }

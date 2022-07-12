@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -61,54 +60,55 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/white"
+            android:contentDescription="Opens company's facebook page"
             android:elevation="35dp"
+            android:onClick="floatingButtonClick"
             android:scaleType="centerCrop"
             android:src="@drawable/fb_icon"
-            android:contentDescription="Opens company's facebook page"
             android:tag="0"
-            app:layout_constraintVertical_bias="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/google_button"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_pager"
+            app:layout_constraintVertical_bias="0"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/google_button"
-            android:tag="1"
-            app:layout_constraintVertical_bias="0"
-            android:contentDescription="Opens company's google page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:scaleType="centerCrop"
+            android:contentDescription="Opens company's google page"
             android:elevation="35dp"
             android:onClick="floatingButtonClick"
+            android:scaleType="centerCrop"
             android:src="@drawable/google_icon"
+            android:tag="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_pager" />
+            app:layout_constraintTop_toBottomOf="@+id/login_pager"
+            app:layout_constraintVertical_bias="0" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/twitter_button"
-            android:tag="2"
-            app:layout_constraintVertical_bias="0"
-            android:contentDescription="Opens company's titter page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:backgroundTint="@color/white"
+            android:contentDescription="Opens company's titter page"
             android:elevation="35dp"
-            android:scaleType="centerCrop"
             android:onClick="floatingButtonClick"
+            android:scaleType="centerCrop"
             android:src="@drawable/twitter_icon"
+            android:tag="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@+id/google_button"
-            app:layout_constraintTop_toBottomOf="@+id/login_pager" />
+            app:layout_constraintTop_toBottomOf="@+id/login_pager"
+            app:layout_constraintVertical_bias="0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

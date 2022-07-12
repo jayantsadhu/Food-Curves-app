@@ -23,8 +23,9 @@
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/search_icon.xml" value="0.199609375" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/static_rv_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/drawable/twitter_icon.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/font/alex_brush.xml" value="0.21015625" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_dash_board.xml" value="0.25" />
-        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.136" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_introductory.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/brands_rv_item.xml" value="0.264" />
@@ -40,6 +41,7 @@
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_log_out.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_my_profile.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_near_by_res.xml" value="0.176953125" />
+        <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_notification.xml" value="0.1875" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding2.xml" value="0.2" />
         <entry key="..\:/Users/Jayant/AndroidStudioProjects/FoodCurves/app/src/main/res/layout/fragment_on_boarding3.xml" value="0.2" />

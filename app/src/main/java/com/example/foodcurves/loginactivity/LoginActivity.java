@@ -75,12 +75,12 @@ public class LoginActivity extends AppCompatActivity {
         twitter.animate().translationY(0).alpha(1).setStartDelay(400).setDuration(1000).start();
         tabLayout.animate().translationX(0).alpha(1).setStartDelay(400).setDuration(1000).start();
 
-        fb.setOnClickListener(new View.OnClickListener() {
+        /*fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
-        });
+        });*/
 
     }
 
