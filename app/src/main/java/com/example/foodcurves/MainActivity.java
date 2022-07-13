@@ -17,6 +17,7 @@ import android.view.View;
 import com.example.foodcurves.loginactivity.LoginActivity;
 import com.example.foodcurves.navdrawer.AboutUsFragment;
 import com.example.foodcurves.dashboard.DashBoardFragment;
+import com.example.foodcurves.navdrawer.MyProfileFragment;
 import com.example.foodcurves.navdrawer.NearByResFragment;
 import com.example.foodcurves.navdrawer.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -84,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()){
             case R.id.nav_home:
-            case R.id.nav_profile:
                 moveToFragment(R.id.nav_container, new DashBoardFragment());
                 break;
             case R.id.nav_restaurant:
@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_about:
                 moveToFragment(R.id.nav_container, new AboutUsFragment());
+                break;
+            case R.id.nav_profile:
+                moveToFragment(R.id.nav_container, new MyProfileFragment());
                 break;
             case  R.id.nav_login:
                 jumpToLoginPage();
@@ -115,14 +118,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
-
+    public void onNotificationClick(View v ){
+        moveToFragment(R.id.nav_container, new NearByResFragment());
+    }
+    public void onProfileClick(View v ){
+        moveToFragment(R.id.nav_container, new MyProfileFragment());
+    }
     public void moveToFragment(int containerID, Fragment fragment){
         getSupportFragmentManager().beginTransaction()
                 .replace(containerID, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(null).commit();
-    }
-
-    public void onNotificationClick(View v ){
-        moveToFragment(R.id.nav_container, new NearByResFragment());
     }
 }
