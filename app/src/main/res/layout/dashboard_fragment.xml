@@ -71,7 +71,7 @@
             android:textSize="16sp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_top1"
+            android:id="@+id/curations_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginStart="10dp"
@@ -126,7 +126,7 @@
             android:background="@color/grey"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_top2"
+            android:id="@+id/curations_recycler_view_2"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginStart="5dp"

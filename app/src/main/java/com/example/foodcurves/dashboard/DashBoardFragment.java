@@ -23,10 +23,10 @@ import java.util.UUID;
 
 public class DashBoardFragment extends Fragment {
 
-    RecyclerView recyclerViewTop1;
-    RecyclerView recyclerViewTop2;
+    RecyclerView curationsRecyclerView;
     RecyclerView brandRView;
     RecyclerView recyclerViewBottom;
+    RecyclerView curationsRecyclerView2;
 
     StaticRVAdapter staticRVAdapter;
     BrandsRVAdapter brandsRVAdapter;
@@ -42,19 +42,16 @@ public class DashBoardFragment extends Fragment {
 
         //WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
-        recyclerViewTop1 = root.findViewById(R.id.recycler_view_top1);
-        recyclerViewTop2 = root.findViewById(R.id.recycler_view_top2);
-        recyclerViewBottom = root.findViewById(R.id.recycler_view_bottom);
+        curationsRecyclerView = root.findViewById(R.id.curations_recycler_view);
         brandRView = root.findViewById(R.id.brands_rv);
+        recyclerViewBottom = root.findViewById(R.id.recycler_view_bottom);
+        curationsRecyclerView2 = root.findViewById(R.id.curations_recycler_view_2);
 
         item = new ArrayList<>();
         LoadingData.putStaticsData(item);
         staticRVAdapter = new StaticRVAdapter(item);
-        recyclerViewTop1.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        recyclerViewTop1.setAdapter(staticRVAdapter);
-
-        recyclerViewTop2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        recyclerViewTop2.setAdapter(staticRVAdapter);
+        curationsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        curationsRecyclerView.setAdapter(staticRVAdapter);
 
         brands = new ArrayList<>();
         LoadingData.putBrandsData(brands);
@@ -90,6 +87,9 @@ public class DashBoardFragment extends Fragment {
                 }
             }
         });
+
+        curationsRecyclerView2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        curationsRecyclerView2.setAdapter(staticRVAdapter);
 
         Fragment fragment = new EndingFragment();
         getParentFragmentManager().beginTransaction()
